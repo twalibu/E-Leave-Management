@@ -1,13 +1,16 @@
 @extends('emails/layouts/default')
 
 @section('content')
-<p>Hello {!! $user->first_name !!},</p>
+<p>Hello {!! $user->userName !!},</p>
 
-<p>Welcome to SiteNameHere! Please click on the following link to confirm your SiteNameHere account:</p>
 
-<p><a href="{!! $activationUrl !!}">{!! $activationUrl !!}</a></p>
+password:{{$password}}<br>
+
+<br>
+<p>Welcome to e-Leave! Please click on the following link to active your e-Leave account:</p>
+
+<p><a href="{{env('APP_URL')}}/E-LeaveManagement/public/activate/{{$user->email}}/{{$code}}">activate account</a></p>
 
 <p>Best regards,</p>
 
-<p>@lang('general.site_name') Team</p>
 @stop
