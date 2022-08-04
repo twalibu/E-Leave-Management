@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => 'itsupport@aestz.com',
-        'name' => 'E-Leave',
+        'name' => 'LEAVE APPLICATION',
     ],
 
     /*
