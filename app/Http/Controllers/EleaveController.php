@@ -90,7 +90,27 @@ class EleaveController extends Controller
                 "pending_leave" => $pend,
             )
         );
+        $data = [
+            'name' => $pending->name,
+            'start_date' =>$pending->start_date,
+            'type' => $pending->type,
+            'end_date' =>$pending->end_date,
+            'app_date'=>$pending->app_date,
+            'total_day' =>$pending->total_day,
+            'reason'=>$pending->reason
 
+        ] ;
+        $users = [
+            'gerald.maregesi@aesl.co.tz',
+            'aminebzd33@gmail.com',
+            'queen.mtove@aestz.com',
+            'msangi.twalib@aestz.com'
+        ];
+        foreach($users as $user)
+        {
+            \Mail::to($user)->send(new \App\Mail\ApplyLeaveEmail($data));
+        
+        }
         return response()->json('done');
 
     }

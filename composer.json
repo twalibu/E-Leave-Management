@@ -11,7 +11,7 @@
         "cartalyst/sentinel": "2.0.*",
         "jenssegers/date": "^3.2",
         "intervention/image": "^2.3",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^6.5",
         "thomaswelton/laravel-gravatar": "~1.0"
 
     },
@@ -52,6 +52,9 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }
